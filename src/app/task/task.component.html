@@ -1,0 +1,22 @@
+<div class="row" style="margin-top:150px;">
+  <div class="col-3"></div>
+  <div class="col-6 textArea">
+    <form >
+      <textarea class="form-control" id="exampleFormControlTextarea1" [formControl]="Textarea" rows="5"
+       [(ngModel)]="inputValue" (ngModelChange)="onInputChange()"></textarea>
+    </form>
+
+    <div *ngIf="showDropdown" class="option">
+
+        <option *ngFor="let option of arrayData" (click)="onSelect($event)">{{option}}</option>
+
+    </div>
+
+<div class="bottom">
+  <a class="add">+ Add Note</a>
+  <a class="reset">Reset</a>
+</div>
+  </div>
+  <div class="col-3"></div>
+</div>
+
